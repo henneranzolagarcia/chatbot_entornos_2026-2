@@ -20,6 +20,7 @@ client = genai.Client()
 def llamar_ia(saludo):
     inferencia = client.interactions.create(
         model="gemini-3.1-flash-lite",
-        input=saludo + historial_de_mensajes
+        input=saludo
     )
     return {"Respuesta": inferencia.output_text }
+
